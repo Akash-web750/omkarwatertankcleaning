@@ -3369,3 +3369,172 @@ button:disabled,
 .call-float:hover{
 	transform:scale(1.1);
 }
+
+
+
+
+/* ==========================
+CONTACT FORM STYLING
+========================== */
+
+#contact-form-section {
+padding: 20px 15px 0px;
+margin-bottom: 0;
+}
+
+.contact-card {
+max-width: 700px;
+margin: 0 auto;
+background: #ffffff;
+padding: 30px;
+border-radius: 18px;
+box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+}
+
+/* Heading */
+
+.contact-card h3 {
+text-align: center;
+margin-bottom: 8px;
+color: #0f172a;
+font-weight: 700;
+}
+
+.contact-card p {
+text-align: center;
+margin-bottom: 20px;
+}
+
+/* Form Fields */
+
+.form-group {
+margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+border: 2px solid #e5e7eb;
+border-radius: 12px;
+padding: 15px;
+font-size: 16px;
+background: #f8fafc;
+transition: all 0.3s ease;
+color: #111827;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+border-color: #2563eb;
+background: #ffffff;
+outline: none;
+box-shadow: 0 0 12px rgba(37,99,235,0.15);
+}
+
+/* Submit Button */
+
+.submit-btn {
+    width: 100%;
+    border: none !important;
+    background: #2563eb !important;
+    color: #ffffff !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+/* Quick Contact */
+
+.quick-contact {
+text-align: center;
+margin-top: 20px;
+margin-bottom: 0;
+}
+
+.quick-contact p {
+margin-bottom: 15px;
+font-size: 18px;
+font-weight: 600;
+}
+
+/* Call + WhatsApp Buttons */
+
+.call-btn,
+.whatsapp-btn {
+display: inline-block;
+min-width: 170px;
+margin: 6px;
+padding: 14px 24px;
+border-radius: 10px;
+text-decoration: none !important;
+color: #ffffff !important;
+font-weight: 700;
+font-size: 17px;
+transition: 0.3s ease;
+}
+
+.call-btn {
+background: #dc2626;
+}
+
+.whatsapp-btn {
+background: #16a34a;
+}
+
+.call-btn:hover,
+.whatsapp-btn:hover {
+opacity: 0.9;
+transform: translateY(-2px);
+}
+
+/* Footer Gap Fix */
+
+#footer {
+padding-top: 2em !important;
+margin-top: 0 !important;
+}
+
+.wrapper.style2 {
+padding-bottom: 1em !important;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+
+.contact-card {
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.form-group input,
+.form-group textarea {
+    font-size: 16px;
+    padding: 14px;
+}
+
+.call-btn,
+.whatsapp-btn {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    text-align: center;
+}
+
+.quick-contact {
+    margin-top: 15px;
+}
+
+}
+
+

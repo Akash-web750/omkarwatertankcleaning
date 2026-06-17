@@ -3346,33 +3346,6 @@ button:disabled,
 	transform: scale(1.1);
 }
 
-
-
-.call-float {
-	position: fixed;
-	bottom: 95px;
-	right: 20px;
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	background: #eef1f2;
-	color: white;
-	font-size: 28px;
-	text-decoration: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 9999;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
-}
-
-.call-float:hover {
-	transform: scale(1.1);
-}
-
-
-
-
 /* ==========================
 CONTACT FORM STYLING
 ========================== */
@@ -4024,45 +3997,50 @@ img {
 
 
 /* Floating Call Button */
-
 .call-float {
 
-    position: fixed;
+	position: fixed;
 
-    width: 60px;
+	bottom: 95px;
 
-    height: 60px;
+	right: 20px;
 
-    bottom: 100px;
+	width: 60px;
 
-    right: 20px;
+	height: 60px;
 
-    background: #e53935;
+	background: #e53935;
 
-    color: white !important;
+	color: white !important;
 
-    border-radius: 50%;
+	border-radius: 50%;
 
-    text-align: center;
+	display: flex;
 
-    font-size: 26px;
+	align-items: center;
 
-    box-shadow: 2px 2px 10px rgba(0,0,0,.3);
+	justify-content: center;
 
-    z-index: 100;
+	font-size: 28px;
 
-}
+	text-decoration: none !important;
 
-.call-float i {
+	border-bottom: none !important;
 
-    color: white !important;
+	box-shadow: 0 5px 15px rgba(0,0,0,.3);
 
-    line-height: 60px;
+	z-index: 9999;
+
+	transition: all .3s ease;
 
 }
 
 .call-float:hover {
 
-    background: #c62828;
+	transform: scale(1.1);
+
+	background: #c62828;
+
+	color: white !important;
 
 }

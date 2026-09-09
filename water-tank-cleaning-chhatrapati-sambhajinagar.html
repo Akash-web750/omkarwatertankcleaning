@@ -1215,6 +1215,367 @@
 
 
 
+
+                <!-- =========================================================
+     OMKAR WATER TANK CLEANING SERVICES
+     LOCATION LOCATOR - CHHATRAPATI SAMBHAJINAGAR
+     Leaflet + OpenStreetMap
+     No Google Maps API Key / No Billing Required
+     ========================================================= -->
+
+                <!-- Leaflet CSS -->
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+                    integrity="sha256-p4NxAoJBhIINfQ3D7q7Q5JQkGmLJ8nZ5M6Y8V8V6F8M=" crossorigin="">
+
+                <style>
+                    /* =========================================================
+     OMKAR LOCATION LOCATOR
+     Scoped styles - will not affect the rest of the website
+     ========================================================= */
+
+                    .omkar-location-locator {
+                        width: 100%;
+                        margin: 50px auto;
+                        padding: 0;
+                    }
+
+                    .omkar-location-locator .locator-heading {
+                        text-align: center;
+                        margin-bottom: 12px;
+                    }
+
+                    .omkar-location-locator .locator-heading h2 {
+                        margin: 0 0 12px;
+                        font-size: 32px;
+                        line-height: 1.25;
+                        font-weight: 700;
+                    }
+
+                    .omkar-location-locator .locator-intro {
+                        max-width: 850px;
+                        margin: 0 auto 28px;
+                        text-align: center;
+                        font-size: 16px;
+                        line-height: 1.7;
+                    }
+
+                    .omkar-location-locator .locator-wrapper {
+                        display: grid;
+                        grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr);
+                        gap: 24px;
+                        align-items: stretch;
+                    }
+
+                    /* Map */
+                    .omkar-location-locator .locator-map {
+                        width: 100%;
+                        height: 420px;
+                        min-height: 320px;
+                        border-radius: 14px;
+                        overflow: hidden;
+                        border: 1px solid #e5e7eb;
+                        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+                        background: #f3f4f6;
+                        z-index: 1;
+                    }
+
+                    /* Information card */
+                    .omkar-location-locator .locator-info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding: 30px;
+                        border-radius: 14px;
+                        border: 1px solid #e5e7eb;
+                        background: #ffffff;
+                        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+                    }
+
+                    .omkar-location-locator .locator-info h3 {
+                        margin: 0 0 18px;
+                        font-size: 23px;
+                        line-height: 1.35;
+                    }
+
+                    .omkar-location-locator .locator-address {
+                        margin: 0 0 22px;
+                        font-size: 15px;
+                        line-height: 1.7;
+                    }
+
+                    .omkar-location-locator .locator-address strong {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    /* Buttons */
+                    .omkar-location-locator .locator-actions {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                    }
+
+                    .omkar-location-locator .locator-btn {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-height: 44px;
+                        padding: 10px 16px;
+                        border-radius: 8px;
+                        text-decoration: none;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 1.2;
+                        transition: transform 0.2s ease, box-shadow 0.2s ease;
+                    }
+
+                    .omkar-location-locator .locator-btn:hover {
+                        transform: translateY(-1px);
+                        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+                    }
+
+                    .omkar-location-locator .locator-btn:focus-visible {
+                        outline: 3px solid rgba(37, 99, 235, 0.25);
+                        outline-offset: 2px;
+                    }
+
+                    .omkar-location-locator .locator-btn-call {
+                        background: #2563eb;
+                        color: #ffffff;
+                    }
+
+                    .omkar-location-locator .locator-btn-whatsapp {
+                        background: #16a34a;
+                        color: #ffffff;
+                    }
+
+                    .omkar-location-locator .locator-btn-directions {
+                        background: #111827;
+                        color: #ffffff;
+                    }
+
+                    .omkar-location-locator .locator-note {
+                        margin: 20px 0 0;
+                        font-size: 13px;
+                        line-height: 1.6;
+                    }
+
+                    /* Leaflet popup */
+                    .omkar-location-locator .leaflet-popup-content {
+                        margin: 12px 15px;
+                        line-height: 1.5;
+                    }
+
+                    /* Mobile */
+                    @media (max-width: 768px) {
+
+                        .omkar-location-locator {
+                            margin: 38px auto;
+                        }
+
+                        .omkar-location-locator .locator-heading h2 {
+                            font-size: 26px;
+                        }
+
+                        .omkar-location-locator .locator-intro {
+                            font-size: 15px;
+                            margin-bottom: 22px;
+                        }
+
+                        .omkar-location-locator .locator-wrapper {
+                            grid-template-columns: 1fr;
+                            gap: 18px;
+                        }
+
+                        .omkar-location-locator .locator-map {
+                            height: 320px;
+                            min-height: 280px;
+                            border-radius: 12px;
+                        }
+
+                        .omkar-location-locator .locator-info {
+                            padding: 24px;
+                        }
+
+                        .omkar-location-locator .locator-info h3 {
+                            font-size: 21px;
+                        }
+
+                        .omkar-location-locator .locator-actions {
+                            flex-direction: column;
+                        }
+
+                        .omkar-location-locator .locator-btn {
+                            width: 100%;
+                        }
+                    }
+                </style>
+
+
+                <!-- =========================================================
+     LOCATION LOCATOR HTML
+     ========================================================= -->
+
+                <section class="omkar-location-locator" aria-labelledby="omkar-location-heading">
+
+                    <div class="locator-heading">
+
+                        <h2 id="omkar-location-heading">
+                            Our Location in Chhatrapati Sambhajinagar
+                        </h2>
+
+                        <p class="locator-intro">
+                            Visit Omkar Water Tank Cleaning Services at our Chhatrapati
+                            Sambhajinagar location in N-2 CIDCO. Use the map below to view
+                            our location and get directions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="locator-wrapper">
+
+                        <!-- Interactive Map -->
+                        <div id="omkar-sambhajinagar-map" class="locator-map"
+                            aria-label="Omkar Water Tank Cleaning Services location map"></div>
+
+
+                        <!-- Business Information -->
+                        <div class="locator-info">
+
+                            <h3>
+                                Omkar Water Tank Cleaning Services
+                            </h3>
+
+                            <p class="locator-address">
+                                <strong>Chhatrapati Sambhajinagar Location</strong>
+
+                                Plot No. 192, New ST Colony,<br>
+                                HPCL Housing Colony, N-2, CIDCO,<br>
+                                Chhatrapati Sambhajinagar,<br>
+                                Maharashtra 431006
+                            </p>
+
+
+                            <div class="locator-actions">
+
+                                <!-- Call -->
+                                <a class="locator-btn locator-btn-call" href="tel:+918149985698"
+                                    aria-label="Call Omkar Water Tank Cleaning Services">
+                                    Call Now
+                                </a>
+
+
+                                <!-- WhatsApp -->
+                                <a class="locator-btn locator-btn-whatsapp"
+                                    href="https://wa.me/918149985698?text=Hello%20Omkar%20Water%20Tank%20Cleaning%20Services%2C%20I%20need%20water%20tank%20cleaning%20in%20Chhatrapati%20Sambhajinagar."
+                                    target="_blank" rel="noopener noreferrer"
+                                    aria-label="Contact Omkar Water Tank Cleaning Services on WhatsApp">
+                                    WhatsApp
+                                </a>
+
+
+                                <!-- Google Maps Directions -->
+                                <a class="locator-btn locator-btn-directions"
+                                    href="https://www.google.com/maps/dir/?api=1&destination=19.8645917,75.3729422"
+                                    target="_blank" rel="noopener noreferrer"
+                                    aria-label="Get directions to Omkar Water Tank Cleaning Services">
+                                    Get Directions
+                                </a>
+
+                            </div>
+
+
+                            <p class="locator-note">
+                                Our Chhatrapati Sambhajinagar service location is in N-2 CIDCO.
+                                Use the map marker or the Get Directions button to navigate to us.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================================================
+     LEAFLET JAVASCRIPT
+     ========================================================= -->
+
+                <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+                    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+                <script>
+                    (function () {
+
+                        /* Omkar Chhatrapati Sambhajinagar coordinates
+                           Imported from the Google Business location */
+                        const omkarLatitude = 19.8645917;
+                        const omkarLongitude = 75.3729422;
+
+                        const mapElement = document.getElementById(
+                            "omkar-sambhajinagar-map"
+                        );
+
+                        if (!mapElement || typeof L === "undefined") {
+                            return;
+                        }
+
+                        /* Create map */
+                        const map = L.map(mapElement, {
+                            scrollWheelZoom: true,
+                            zoomControl: true
+                        }).setView(
+                            [omkarLatitude, omkarLongitude],
+                            16
+                        );
+
+
+                        /* OpenStreetMap tiles */
+                        L.tileLayer(
+                            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                            {
+                                maxZoom: 19,
+                                attribution:
+                                    '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'
+                            }
+                        ).addTo(map);
+
+
+                        /* Business marker */
+                        const marker = L.marker([
+                            omkarLatitude,
+                            omkarLongitude
+                        ]).addTo(map);
+
+
+                        /* Marker popup */
+                        marker.bindPopup(
+                            "<strong>Omkar Water Tank Cleaning Services</strong><br>" +
+                            "Chhatrapati Sambhajinagar"
+                        );
+
+
+                        /* Open popup automatically */
+                        marker.openPopup();
+
+
+                        /* Fix map sizing after page rendering */
+                        setTimeout(function () {
+                            map.invalidateSize();
+                        }, 300);
+
+
+                        /* Fix map sizing again after a longer delay */
+                        setTimeout(function () {
+                            map.invalidateSize();
+                        }, 1000);
+
+                    })();
+                </script>
+
+
+
                 <!-- =========================================================
      STEP #2 — REAL OMKAR WATER TANK CLEANING WORK
      Relevance + Prominence
@@ -1317,6 +1678,7 @@
                             }
                         }
                     </style>
+
 
 
                     <h2>Real Water Tank Cleaning Work in Chhatrapati Sambhajinagar</h2>
@@ -2983,9 +3345,9 @@
             <header class="major">
                 <h2>Water Tank Cleaning Service Areas in Chhatrapati Sambhajinagar (Aurangabad)</h2>
             </header>
-                <p>
-                    Select Your Area To Find Professional Water Tank Cleaning Services Near You.
-                </p>
+            <p>
+                Select Your Area To Find Professional Water Tank Cleaning Services Near You.
+            </p>
 
             <!-- ================= CIDCO & CENTRAL ================= -->
 
